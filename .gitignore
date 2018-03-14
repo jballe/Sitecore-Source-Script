@@ -1,0 +1,7 @@
+*.zip
+packages/
+*.log
+
+Assemblies/
+*.dll
+*.exe
