@@ -43,7 +43,7 @@ if($OnlyNew) {
         $name = (Split-Path $_ -Leaf).Replace(".zip", "")
         $verName = $name.Substring("Sitecore ".Length)
         $version = $verName.Replace(" rev. ", ".")
-        $tag = "v{$version}"
+        $tag = "v${version}"
         $include = $tags.Contains($tag)
         return $include
     }
@@ -178,6 +178,6 @@ $files | ForEach-Object {
     if($Commit) {
         & git add -A
         & git commit -m "Added version $version"
-        & git tag -a $tag
+        & git tag $tag
     }
 }

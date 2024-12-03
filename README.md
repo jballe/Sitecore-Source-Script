@@ -14,14 +14,14 @@ Sitecore files and decompiled sources are located in the [Sitecore folder](./Sit
 
 We have two options:
 
-1. From official Sitecore NuGet feed. This only contains assemblies (not other files from website root). To use this you run:
+1. From official Sitecore NuGet feed and place it in the [packages folder](./packages). This only contains assemblies (not other files from website root). To use this you run:
 
 ```powershell
 ./bld/Get-VersionsFromNuGet.ps1 -Download -OnlyNew
 ./bld/Process-Packages.ps1 [-Commit] [-MajorVersions 8,9] [-Versions 9.0.171002]
 ```
 
-1. Download the "ZIP archive of the Sitecore site root folder" and place it in the [downloads folder(./downloads). Then run:
+1. Download the "ZIP archive of the Sitecore site root folder" and place it in the [downloads folder](./downloads). Then run:
 
 ```powershell
 ./bld/Get-VersionsFromSitecoreDev.ps1 -Username <your-sdn-username> -Password <you-sdn-password> -Download -OnlyNew
